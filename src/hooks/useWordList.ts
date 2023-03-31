@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import readingInput from "../components/readingInput";
 
 const useWordList = () => {
-    const [words, setWords] = useState<string[]>([])
+    const [ words, setWords ] = useState<string[]>([])
     const inputText = readingInput();
 
     useEffect(() => {
