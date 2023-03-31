@@ -29,13 +29,13 @@ const ShowList = () => {
 
     if(!isLoaded){
         return <div>Loading....</div>
+    } else {
+        return (
+            <div style={{ display: 'flex', width: "100vw", flexWrap: "wrap" }}>
+                {combinations.map((element, index) => <p key={index}>{element},</p>)}
+            </div>
+        )
     }
-
-    return (
-        <div style={{display:'flex', width:"100vw", flexWrap:"wrap"}}>
-            {combinations.map(element => <p>{element},</p>)}
-        </div>
-    )
 }
 
 export default ShowList;
