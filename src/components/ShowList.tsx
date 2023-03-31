@@ -24,7 +24,6 @@ const ShowList = () => {
 
         setCombinations(wordPairs);
         setIsLoaded(true);
-        console.log(combinations);
     }, [words])
 
     if(!isLoaded){
