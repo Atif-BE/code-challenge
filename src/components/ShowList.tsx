@@ -8,15 +8,14 @@ const ShowList = () => {
 
     useEffect(() => {
         const sixLetterWords = words.filter(word => word.length === 6 && word.trim() !== ``);
-        const wordPairs: any = [];
+        const wordPairs: string[] = [];
 
         for (let i = 0; i < sixLetterWords.length; i++) {
             for (let j = i + 1; j < sixLetterWords.length; j++) {
-                const word1 = sixLetterWords[i];
-                const word2 = sixLetterWords[j];
-                console.log(word1, word2)
-                const combo = word1?.slice(0, 2) + word2?.slice(2);
-                if (sixLetterWords.includes(combo)) {
+                const word1 = words[i];
+                const word2 = words[j];
+                const combo = word1 + word2;
+                if (combo.length === 6 && sixLetterWords.includes(combo)) {
                     wordPairs.push(combo);
                 }
             }
